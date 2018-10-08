@@ -1,5 +1,14 @@
+# User defined files
+# Ignore some directories in db/
+db/dump
+db/logs
+db/mysql
+# Ignore some directories in website/
+website/static
+website/media/images
+
 # Byte-compiled / optimized / DLL files
-__pycache__/
+*__pycache__/
 *.py[cod]
 *$py.class
 
@@ -84,7 +93,6 @@ celerybeat-schedule
 # Environments
 .env
 .venv
-env/
 venv/
 ENV/
 env.bak/
