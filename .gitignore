@@ -3,7 +3,6 @@
 db/mysql
 # Ignore some directories in website/
 website/static
-website/media/images
 
 # Byte-compiled / optimized / DLL files
 *__pycache__/
