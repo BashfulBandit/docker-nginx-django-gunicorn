@@ -1,0 +1,35 @@
+<!-- templates/base.html -->
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<meta name="description" content="">
+	    <meta name="author" content="">
+		<title>{% block title %}Django Project{% endblock %}</title>
+        
+		<!-- Pull in the rest of head. -->
+		{% include 'core/head.html' %}
+		
+		{% block app_css %}
+		{% endblock %}
+        
+	</head>
+	<body>
+
+		<!-- Pull in base navbar. -->
+		{% include 'core/navbar.html' %}
+		
+		<!-- Define block 'content' -->
+		{% block content %}
+		{% endblock %}
+        
+		<!-- Pull in base footer. -->
+		{% include 'core/footer.html' %}
+
+		<!-- Pull in base JS scripts. -->
+		{% include 'core/scripts.html' %}
+		
+	</body>
+</html>

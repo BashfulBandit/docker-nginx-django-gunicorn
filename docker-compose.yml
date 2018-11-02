@@ -4,9 +4,11 @@ services:
   nginx:
     image: nginx:latest
     volumes:
+      - ./nginx/logs:/var/log/nginx
       - ./nginx/nginx.conf:/etc/nginx/nginx.conf
       - ./nginx/conf.d:/etc/nginx/conf.d
-      - ./nginx/logs:/var/log/nginx
+      # Add static files for nginx to serve.
+      - ./website/static:/website/static
     depends_on:
       - django
     networks:
@@ -21,6 +23,8 @@ services:
       - ./env/django-mariadb.env
       - ./env/django.env
       - ./env/dev.env
+    volumes:
+      - ./website:/home/django/website
     networks:
       - django_frontend-net
       - django_backend-net
@@ -33,9 +37,6 @@ services:
       - ./env/mariadb.env
     volumes:
       - ./db/mysql:/var/lib/mysql
-      - ./db/dump:/docker-entrypoint-initdb.d
-      - ./db/my.cnf:/etc/mysql/my.cnf
-      - ./db/conf.d:/etc/mysql/conf.d
 
 networks:
   django_frontend-net:

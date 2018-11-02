@@ -1,7 +1,5 @@
 # User defined files
 # Ignore some directories in db/
-db/dump
-db/logs
 db/mysql
 # Ignore some directories in website/
 website/static
