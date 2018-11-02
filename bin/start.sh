@@ -18,6 +18,7 @@ docker-compose \
 	-f ${COMPOSE_FILE} \
 	up -d
 
-sleep 5s
+echo "Waiting a few seconds for both Django and DB to settle..."
+sleep 10s
 
 exit 0
