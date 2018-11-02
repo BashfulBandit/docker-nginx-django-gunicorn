@@ -23,3 +23,22 @@ $ git clone https://github.com/BashfulBandit/docker-nginx-django-gunicorn.git
 ```
 $ bash bin/start.sh
 ```
+
+You can now see your Django website running at http://localhost:8000.
+
+3. Stop the services.
+
+```
+$ bash bin/stop.sh
+```
+
+## Docker Images
+
+* [dtempleton/django](https://hub.docker.com/r/dtempleton/django/)
+* [nginx](https://hub.docker.com/_/nginx/)
+* [mariadb](https://hub.docker.com/_/mariadb/)
+
+While I use MariaDB as my Database of choice, you should be able to use any Django
+supported database management system. See the Docker Hub page for the
+dtempleton/django Docker image for how it uses environment variables to define
+some Django variables in settings.py.
