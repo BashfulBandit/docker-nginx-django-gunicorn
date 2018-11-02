@@ -18,4 +18,6 @@ docker-compose \
 	-f ${COMPOSE_FILE} \
 	up -d
 
+sleep 5s
+
 exit 0

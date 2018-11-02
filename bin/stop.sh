@@ -12,5 +12,5 @@ COMPOSE_FILE="docker-compose.yml"
 echo "Going to use: ${COMPOSE_FILE} for docker-compose"
 
 docker-compose \
-	-f ${COMPOSE_FILE}} \
+	-f ${COMPOSE_FILE} \
 	down
