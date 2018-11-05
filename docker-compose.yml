@@ -40,6 +40,6 @@ services:
 
 networks:
   django_frontend-net:
-    name: django_backend-net
+    name: django_frontend-net
   django_backend-net:
     name: django_backend-net
